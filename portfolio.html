@@ -3,16 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GpopzRaw - Portfolio</title>
+  <title>Portfolio – GpopzRaw</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Theme styles */
+    body.lighttheme {
+      background-color: #e0f7ff;
+      color: #000;
+    }
+
+    body.darktheme {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .navlinks a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    .themetoggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .herocontent {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .projectssection h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #007acc;
+    }
+
+    .projectgrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+    }
+
+    .projectcard {
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .projectcard:hover {
+      transform: scale(1.02);
+    }
+
+    .projectcard h3 {
+      margin-top: 0;
+    }
+
+    .chatbotbutton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .chatbotbutton:hover {
+      background-color: #005fa3;
+    }
+
+    .sitefooter {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ccc;
+    }
+
+    .sociallinks a {
+      color: #007acc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
-<body class="light-theme">
+<body class="lighttheme">
 
   <!-- Navigation -->
   <header class="navbar">
     <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <ul class="nav-links">
+      <ul class="navlinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -20,132 +125,150 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button onclick="toggleTheme()" class="theme-toggle">☀️ Toggle Theme</button>
+    <button onclick="toggleTheme()" class="themetoggle">🌙</button>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero about-hero">
-    <div class="hero-content center-text">
-      <h1>My Work</h1>
-      <p>A collection of my best projects — from web apps to AI tools and educational platforms.</p>
-    </div>
+  <section class="herocontent">
+    <h1>My Portfolio</h1>
+    <p>Explore some of my recent projects and creative work across web development, AI, education, and more.</p>
   </section>
 
-  <!-- Filter Buttons -->
-  <section class="filter-section">
-    <div class="filters">
-      <button class="filter-btn active" onclick="filterProjects('all')">All</button>
-      <button class="filter-btn" onclick="filterProjects('web')">Web</button>
-      <button class="filter-btn" onclick="filterProjects('ai')">AI</button>
-      <button class="filter-btn" onclick="filterProjects('education')">Education</button>
-      <button class="filter-btn" onclick="filterProjects('media')">Media</button>
-    </div>
-  </section>
+  <!-- Projects Section -->
+  <section class="projectssection">
+    <h2>Featured Projects</h2>
 
-  <!-- Projects Grid -->
-  <section class="projects-grid">
-    <div class="project-card" data-category="web">
-      <img src="images/project-web1.jpg" alt="Web Project 1">
-      <h3>Modern Portfolio Site</h3>
-      <p>Fully responsive personal website built with HTML, CSS, and JavaScript.</p>
-      <span class="category-tag">Web</span>
-      <div class="project-links">
-        <a href="#">GitHub</a> | 
-        <a href="#">Live Demo</a>
+    <div class="projectgrid">
+
+      <div class="projectcard">
+        <h3>💻 Personal Portfolio Website</h3>
+        <p>A clean, responsive, and futuristic personal website built with HTML, CSS, and JavaScript. Features include a persistent dark/light mode, chatbot, and smooth navigation.</p>
+        <a href="#">View Project →</a>
       </div>
-    </div>
 
-    <div class="project-card" data-category="ai">
-      <img src="images/project-ai1.jpg" alt="AI Project 1">
-      <h3>AI Chatbot Assistant</h3>
-      <p>Intelligent chatbot using OpenAI API to answer user questions and help with tasks.</p>
-      <span class="category-tag">AI</span>
-      <div class="project-links">
-        <a href="#">GitHub</a> | 
-        <a href="#">Demo</a>
+      <div class="projectcard">
+        <h3>🤖 AI-Powered Chatbot</h3>
+        <p>An interactive AI assistant that helps users learn about me, my services, and provides basic tech support using JavaScript logic.</p>
+        <a href="#">View Demo →</a>
       </div>
-    </div>
 
-    <div class="project-card" data-category="education">
-      <img src="images/project-edu1.jpg" alt="Education Project 1">
-      <h3>Learning Dashboard</h3>
-      <p>Interactive dashboard for tracking learning progress and course completion.</p>
-      <span class="category-tag">Education</span>
-      <div class="project-links">
-        <a href="#">GitHub</a> | 
-        <a href="#">Live</a>
+      <div class="projectcard">
+        <h3>🎓 Educational Tutorial Platform</h3>
+        <p>A simple platform for sharing coding tutorials, guides, and learning resources for beginners and advanced developers alike.</p>
+        <a href="#">Learn More →</a>
       </div>
-    </div>
 
-    <div class="project-card" data-category="media">
-      <img src="images/project-media1.jpg" alt="Media Project 1">
-      <h3>Digital Podcast Studio</h3>
-      <p>Setup and automation tools for recording, editing, and publishing podcasts.</p>
-      <span class="category-tag">Media</span>
-      <div class="project-links">
-        <a href="#">Details</a>
+      <div class="projectcard">
+        <h3>🔐 Cybersecurity Tips Website</h3>
+        <p>An educational site offering practical tips and best practices for staying safe online, including password management, phishing awareness, and secure browsing habits.</p>
+        <a href="#">Visit Site →</a>
       </div>
-    </div>
 
-    <div class="project-card" data-category="web">
-      <img src="images/project-web2.jpg" alt="Web Project 2">
-      <h3>Blog Platform</h3>
-      <p>Full-stack blog engine with admin panel and markdown support.</p>
-      <span class="category-tag">Web</span>
-      <div class="project-links">
-        <a href="#">GitHub</a> | 
-        <a href="#">Live</a>
+      <div class="projectcard">
+        <h3>🎙️ Tech Talk Podcast Series</h3>
+        <p>A podcast series covering topics like AI, web development, cybersecurity, and digital innovation. Episodes are hosted on major platforms like Spotify and YouTube.</p>
+        <a href="#">Listen Now →</a>
       </div>
-    </div>
 
-    <div class="project-card" data-category="ai">
-      <img src="images/project-ai2.jpg" alt="AI Project 2">
-      <h3>Image Generator Tool</h3>
-      <p>Uses AI to generate creative images based on text prompts.</p>
-      <span class="category-tag">AI</span>
-      <div class="project-links">
-        <a href="#">GitHub</a> | 
-        <a href="#">Try It</a>
+      <div class="projectcard">
+        <h3>📱 WhatsApp Automation Bot</h3>
+        <p>A bot that automates responses, collects user input, and integrates with APIs for business use cases like customer support and order tracking.</p>
+        <a href="#">See How It Works →</a>
       </div>
-    </div>
-  </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <h2>Want to See More?</h2>
-    <p>Explore all my open-source projects on GitHub or reach out to discuss custom work.</p>
-    <a href="https://github.com/gpopzraw9"  target="_blank" class="btn-primary">View on GitHub</a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="sitefooter">
     <p>GpopzRaw © 2025. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">GitHub</a> | 
-      <a href="#">YouTube</a> | 
-      <a href="#">Twitter</a>
+    <p>📍 Location: No.8 Karewa Maskare, Karewa Ward, Yola-Jimeta, Adamawa State</p>
+    <p>📞 Phone: 07088886028 | WhatsApp: +234708886028 | Email: haroon@bluesapphire.com.ng</p>
+    <div class="sociallinks">
+      <a href="https://github.com/gpopzraw9/">GitHub</a>  |
+      <a href="#">LinkedIn</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Twitter/X</a>
     </div>
-    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
+    <button onclick="toggleTheme()" class="themetogglefooter">☀️</button>
   </footer>
 
   <!-- AI Chatbot Button -->
-  <div class="chatbot-button" onclick="openChatbot()">
+  <div class="chatbotbutton" onclick="openChatbot()">
     💬 Chat with AI
   </div>
 
-  <!-- Placeholder Chatbot Modal -->
-  <div id="chatbotModal" class="chatbot-modal">
-    <div class="chatbot-header">
+  <!-- Chatbot Modal -->
+  <div id="chatbotModal" class="chatbotmodal">
+    <div class="chatbotheader">
       <span>🤖 GpopzBot</span>
       <button onclick="closeChatbot()">✕</button>
     </div>
-    <div class="chatbot-body">
+    <div class="chatbotbody">
       <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
       <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    // Load theme from localStorage
+    document.addEventListener("DOMContentLoaded", function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.remove("lighttheme");
+        document.body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+      } else {
+        document.body.classList.remove("darktheme");
+        document.body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+      }
+    });
+
+    // Toggle theme and save preference
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("darktheme");
+
+      if (isDark) {
+        body.classList.remove("darktheme");
+        body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("lighttheme");
+        body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Chatbot functions
+    function openChatbot() {
+      document.getElementById("chatbotModal").style.display = "block";
+    }
+
+    function closeChatbot() {
+      document.getElementById("chatbotModal").style.display = "none";
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.querySelector(".chatbotbody input");
+      alert("You asked: " + input.value);
+      input.value = "";
+    }
+  </script>
 </body>
 </html>
