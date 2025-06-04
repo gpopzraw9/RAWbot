@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GpopzRaw — Where Innovation Lives</title>
+  <title>GpopzRaw - Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="dark-theme">
+<body class="light-theme">
 
   <!-- Navigation -->
   <header class="navbar">
@@ -20,19 +20,19 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button onclick="toggleTheme()" class="theme-toggle">Toggle Theme</button>
+    <button onclick="toggleTheme()" class="theme-toggle">🌙 Toggle Theme</button>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <img src="images/me.jpg" alt="Haroon Ahmad Amin" class="profile-pic" />
+      <img src="images/me.jpg" alt="Haroon" class="profile-pic" />
       <h1>Welcome to GpopzRaw</h1>
-      <p>I’m Haroon Ahmad Amin — a creator, innovator, and builder of digital dreams.</p>
+      <p>I'm Haroon Ahmad Amin — a creator, innovator, and builder of digital dreams.</p>
     </div>
   </section>
 
-  <!-- What I Do Section -->
+  <!-- What I Do -->
   <section class="intro-section">
     <h2>What I Do</h2>
     <p>
@@ -42,56 +42,42 @@
   </section>
 
   <!-- Services Grid -->
-  <section class="services">
-    <h2>Featured Services</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <h3>💻 Full-Stack Web Development</h3>
-        <p>Build fast, scalable, and secure websites and applications from scratch.</p>
-      </div>
-      <div class="service-card">
-        <h3>🤖 AI & Automation Tools</h3>
-        <p>Create smart tools and workflows using artificial intelligence and machine learning.</p>
-      </div>
-      <div class="service-card">
-        <h3>🎓 Educational Platform & Tutorials</h3>
-        <p>Teach coding, cybersecurity, and innovation through engaging content and workshops.</p>
-      </div>
-      <div class="service-card">
-        <h3>🔐 Cybersecurity Guidance</h3>
-        <p>Helping individuals and businesses protect their digital assets and data.</p>
-      </div>
-      <div class="service-card">
-        <h3>🎙️ Podcasting & Digital Media</h3>
-        <p>Covering tech, culture, and future trends through storytelling and interviews.</p>
-      </div>
+  <section class="services-grid">
+    <div class="service-card">
+      <h3>💻 Full-Stack Web Development</h3>
+      <p>Modern, scalable, and responsive websites and applications built with the latest tools and frameworks.</p>
+    </div>
+    <div class="service-card">
+      <h3>🤖 AI & Automation Tools</h3>
+      <p>Integrate AI into your workflow with smart bots, chatbots, automation scripts, and data analysis tools.</p>
+    </div>
+    <div class="service-card">
+      <h3>🎓 Educational Platform & Tutorials</h3>
+      <p>Create and share knowledge through engaging tutorials, courses, and learning platforms.</p>
+    </div>
+    <div class="service-card">
+      <h3>🔐 Cybersecurity Guidance</h3>
+      <p>Learn how to secure your systems, protect data, and stay ahead of threats with best practices.</p>
+    </div>
+    <div class="service-card">
+      <h3>🎙️ Podcasting & Digital Media</h3>
+      <p>Craft and publish compelling audio content that connects with audiences around the world.</p>
     </div>
   </section>
 
-  <!-- About Me Section -->
+  <!-- About Me -->
   <section class="about-me">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="images/me.jpg" alt="Haroon Ahmad Amin" class="bio-pic" />
-      <div class="bio-text">
-        <p>
-          Hello! I'm Haroon Ahmad Amin — a passionate developer, educator, and digital creator.
-          I love building things that make life easier and more interesting. Whether it's crafting powerful web apps,
-          exploring AI, or sharing knowledge through tutorials, I'm always excited to learn and grow.
-        </p>
-        <p>
-          My journey started with curiosity, grew through experience, and continues to evolve with every new project.
-          Check out my <a href="about.html">full story</a> if you'd like to know more.
-        </p>
-      </div>
+      <img src="images/me.jpg" alt="Haroon Portrait" class="bio-pic" />
+      <p>
+        I’m Haroon, a self-taught developer, educator, and tech enthusiast passionate about building things that matter.
+        From coding to creating content, I enjoy solving problems, sharing knowledge, and pushing the boundaries of what’s possible.
+        <br><br>
+        My journey started with curiosity, and now I'm dedicated to helping others learn, grow, and innovate in this ever-evolving digital world.
+        <a href="about.html">Read more →</a>
+      </p>
     </div>
-  </section>
-
-  <!-- Testimonials or Highlights (Optional) -->
-  <section class="highlights">
-    <blockquote>
-      "Haroon brings creativity and precision to every project — a rare combination."
-    </blockquote>
   </section>
 
   <!-- Footer -->
@@ -102,7 +88,26 @@
       <a href="#">YouTube</a> | 
       <a href="#">Twitter</a>
     </div>
+    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
   </footer>
+
+  <!-- AI Chatbot Button -->
+  <div class="chatbot-button" onclick="openChatbot()">
+    💬 Chat with AI
+  </div>
+
+  <!-- Placeholder Chatbot Modal -->
+  <div id="chatbotModal" class="chatbot-modal">
+    <div class="chatbot-header">
+      <span>🤖 GpopzBot</span>
+      <button onclick="closeChatbot()">✕</button>
+    </div>
+    <div class="chatbot-body">
+      <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
+      <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
