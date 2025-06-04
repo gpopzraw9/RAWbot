@@ -3,16 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GpopzRaw - Home</title>
+  <title>GpopzRaw – Where Innovation Lives</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Futuristic light theme */
+    body.lighttheme {
+      background-color: #e0f7ff;
+      color: #000;
+    }
+
+    /* Futuristic dark theme */
+    body.darktheme {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+    }
+
+    .hero h1, .hero p {
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .introsection h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #007acc;
+    }
+
+    .chatbotbutton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .chatbotbutton:hover {
+      background-color: #005fa3;
+    }
+
+    .chatbotmodal {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      color: #fff;
+      z-index: 1000;
+    }
+
+    .chatbotheader {
+      background-color: #007acc;
+      padding: 10px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .chatbotheader button {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .chatbotbody {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    .chatbotbody input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .chatbotbody button {
+      margin-top: 5px;
+      padding: 6px 12px;
+      border: none;
+      background-color: #007acc;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body class="light-theme">
+<body class="lighttheme">
 
   <!-- Navigation -->
   <header class="navbar">
     <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <ul class="nav-links">
+      <ul class="navlinks">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -20,99 +117,165 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button onclick="toggleTheme()" class="theme-toggle">🌙 Toggle Theme</button>
+    <button onclick="toggleTheme()" class="themetoggle">🌙 Toggle Theme</button>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <img src="images/me.jpg" alt="Haroon" class="profile-pic" />
+    <div class="herocontent">
+      <img src="images/me.jpg" alt="Haroon Ahmad Amin" class="profilepic" />
       <h1>Welcome to GpopzRaw</h1>
       <p>I'm Haroon Ahmad Amin — a creator, innovator, and builder of digital dreams.</p>
     </div>
   </section>
 
   <!-- What We Do -->
-  <section class="intro-section">
-    <h2>What We Do</h2>
+  <section class="introsection">
+    <h2>WHAT WE DO</h2>
     <p>
-      At GpopzRaw, we offer full-stack development, AI-integrated web apps, educational content creation,
+      At GpopzRaw, we offer fullstack development, AI-integrated web apps, educational content creation,
       cybersecurity insights, and creative tech solutions tailored for impact.
     </p>
   </section>
 
   <!-- Services Grid -->
-  <section class="services-grid">
-    <div class="service-card">
-      <h3>💻 Full-Stack Web Development</h3>
+  <section class="servicesgrid">
+    <div class="servicecard">
+      <h3>💻 FullStack Web Development</h3>
       <p>Modern, scalable, and responsive websites and applications built with the latest tools and frameworks.</p>
+      <a href="webdevelopment.html">Learn more →</a>
     </div>
-    <div class="service-card">
+    <div class="servicecard">
       <h3>🤖 AI & Automation Tools</h3>
       <p>Integrate AI into your workflow with smart bots, chatbots, automation scripts, and data analysis tools.</p>
+      <a href="aiautomation.html">Learn more →</a>
     </div>
-    <div class="service-card">
+    <div class="servicecard">
       <h3>🎓 Educational Platform & Tutorials</h3>
       <p>Create and share knowledge through engaging tutorials, courses, and learning platforms.</p>
+      <a href="educationtutorials.html">Learn more →</a>
     </div>
-    <div class="service-card">
+    <div class="servicecard">
       <h3>🔐 Cybersecurity Guidance</h3>
       <p>Learn how to secure your systems, protect data, and stay ahead of threats with best practices.</p>
+      <a href="cybersecurity.html">Learn more →</a>
     </div>
-    <div class="service-card">
+    <div class="servicecard">
       <h3>🎙️ Podcasting & Digital Media</h3>
       <p>Craft and publish compelling audio content that connects with audiences around the world.</p>
+      <a href="podcastingmedia.html">Learn more →</a>
     </div>
   </section>
 
   <!-- About Me -->
-  <section class="about-me">
+  <section class="aboutme">
     <h2>About Me</h2>
-    <div class="about-content">
-      <img src="images/me.jpg" alt="Haroon Portrait" class="bio-pic" />
+    <div class="aboutcontent">
+      <img src="images/me.jpg" alt="Haroon Portrait" class="biopic" />
       <p>
-        I’m Haroon, a self-taught developer, educator, and tech enthusiast passionate about building things that matter.
-        My journey began with curiosity and a love for problem-solving. Over the years, I’ve worked on diverse projects ranging from small personal websites to large-scale applications.
+        I’m Haroon Ahmad Amin, a self-taught developer, educator, and tech enthusiast driven by an insatiable curiosity and love for problem-solving.
+        My journey began with a simple goal: to build things that make a difference. Over time, I've worked on diverse projects ranging from personal blogs to large-scale enterprise applications.
         <br><br>
-        I believe in the power of technology to create positive change, whether it’s through education, innovation, or solving real-world problems.
+        Technology isn’t just my career—it's my passion. I believe in empowering others through education and innovation, which is why I also create tutorials, host podcasts, and contribute to open-source communities.
         <br><br>
-        Beyond coding, I enjoy sharing my knowledge through tutorials, podcasts, and community events. My goal is to inspire others to explore the possibilities of technology and build their own digital creations.
+        Whether it’s designing elegant user experiences, developing intelligent automation tools, or crafting educational content, I aim to deliver value with every project.
         <br><br>
-        Let’s connect and collaborate to bring your ideas to life!
+        Let’s connect and bring your ideas to life—because great ideas deserve great execution.
         <a href="about.html">Read more →</a>
       </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="sitefooter">
     <p>GpopzRaw © 2025. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">GitHub</a> | 
-      <a href="#">YouTube</a> | 
-      <a href="#">Twitter</a>
+    <p>📍 Location: No.8 Karewa Maskare, Karewa Ward, Yola-Jimeta, Adamawa State</p>
+    <p>📞 Phone: 07088886028 | WhatsApp: +2347088886028 | Email: haroon@bluesapphire.com.ng</p>
+    <div class="sociallinks">
+      <a href="https://github.com/gpopzraw9/">GitHub</a>  |
+      <a href="#">LinkedIn</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Twitter/X</a>
     </div>
-    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
+    <button onclick="toggleTheme()" class="themetogglefooter">☀️</button>
   </footer>
 
   <!-- AI Chatbot Button -->
-  <div class="chatbot-button" onclick="openChatbot()">
+  <div class="chatbotbutton" onclick="openChatbot()">
     💬 Chat with AI
   </div>
 
-  <!-- Placeholder Chatbot Modal -->
-  <div id="chatbotModal" class="chatbot-modal">
-    <div class="chatbot-header">
+  <!-- Chatbot Modal -->
+  <div id="chatbotModal" class="chatbotmodal">
+    <div class="chatbotheader">
       <span>🤖 GpopzBot</span>
       <button onclick="closeChatbot()">✕</button>
     </div>
-    <div class="chatbot-body">
+    <div class="chatbotbody">
       <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
       <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    // Load theme from localStorage
+    document.addEventListener("DOMContentLoaded", function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.remove("lighttheme");
+        document.body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+      } else {
+        document.body.classList.remove("darktheme");
+        document.body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+      }
+    });
+
+    // Toggle theme and save preference
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("darktheme");
+
+      if (isDark) {
+        body.classList.remove("darktheme");
+        body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("lighttheme");
+        body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Chatbot functions
+    function openChatbot() {
+      document.getElementById("chatbotModal").style.display = "block";
+    }
+
+    function closeChatbot() {
+      document.getElementById("chatbotModal").style.display = "none";
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.querySelector(".chatbotbody input");
+      alert("You asked: " + input.value);
+      input.value = "";
+    }
+  </script>
 </body>
 </html>
