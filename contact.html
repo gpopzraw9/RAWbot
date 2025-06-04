@@ -3,16 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GpopzRaw - Contact</title>
+  <title>Contact Me – GpopzRaw</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Theme Styles */
+    body.lighttheme {
+      background-color: #e0f7ff;
+      color: #000;
+    }
+
+    body.darktheme {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .navlinks a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    .themetoggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .herocontent {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contactsection {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+
+    .contactform input,
+    .contactform textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #f0f0f0;
+      color: #000;
+      font-size: 1rem;
+    }
+
+    .contactform button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .contactform button:hover {
+      background-color: #005fa3;
+    }
+
+    .mapsection iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .chatbotbutton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .chatbotbutton:hover {
+      background-color: #005fa3;
+    }
+
+    .sitefooter {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ccc;
+    }
+
+    .sociallinks a {
+      color: #007acc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
-<body class="light-theme">
+<body class="lighttheme">
 
   <!-- Navigation -->
   <header class="navbar">
     <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <ul class="nav-links">
+      <ul class="navlinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -20,142 +137,149 @@
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
-    <button onclick="toggleTheme()" class="theme-toggle">☀️ Toggle Theme</button>
+    <button onclick="toggleTheme()" class="themetoggle">🌙</button>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero about-hero">
-    <div class="hero-content center-text">
-      <h1>Get in Touch</h1>
-      <p>I'm open to collaborations, freelance work, or just a friendly chat about tech and innovation.</p>
-    </div>
+  <section class="herocontent">
+    <h1>Contact Me</h1>
+    <p>Have a question or ready to collaborate? I’d love to hear from you.</p>
   </section>
 
-  <!-- Contact Info & Form -->
-  <section class="contact-section">
-    <div class="contact-container">
-      
-      <!-- Left: Contact Info -->
-      <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p>If you'd like to get in touch, feel free to reach out via any of the methods below.</p>
+  <!-- Contact Section -->
+  <section class="contactsection">
+    <div class="contactform">
+      <h2>Send Me a Message</h2>
+      <form onsubmit="handleFormSubmit(event)">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="John Doe" required />
 
-        <ul class="contact-list">
-          <li>📍 <strong>Location:</strong> No.8 Karewa Maskare, Karewa Ward, Yola-Jimeta, Adamawa State, Nigeria</li>
-          <li>📞 <strong>Phone:</strong> <a href="tel:+2347088886028">07088886028</a></li>
-          <li>💬 <strong>WhatsApp:</strong> <a href="https://wa.me/2347088886028"  target="_blank">Chat me on WhatsApp</a></li>
-          <li>✉️ <strong>Email:</strong> <a href="mailto:haroon@bluesapphire.com.ng">haroon@bluesapphire.com.ng</a></li>
-          <li>🌐 <strong>Social:</strong>
-            <div class="social-icons">
-              <a href="https://github.com/gpopzraw9"  target="_blank">GitHub</a> | 
-              <a href="#" target="_blank">LinkedIn</a> | 
-              <a href="#" target="_blank">YouTube</a> | 
-              <a href="#" target="_blank">Twitter/X</a>
-            </div>
-          </li>
-          <li>🕒 <strong>Working Hours:</strong> Mon-Fri 9AM – 7PM WAT</li>
-        </ul>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="john@example.com" required />
 
-        <!-- Google Map -->
-        <div class="map-container">
-          <iframe 
-            src="https://www.google.com/maps?q=No.8%20Karewa%20Maskare%2C%20Karewa%20Ward%2C%20Yola-Jimeta%2C%20Adamawa%20State%2C%20Nigeria&output=embed"
-            width="100%" 
-            height="300" 
-            frameborder="0" 
-            style="border:0;" 
-            allowfullscreen="" 
-            aria-hidden="false" 
-            tabindex="0">
-          </iframe>
-        </div>
-      </div>
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
 
-      <!-- Right: Contact Form -->
-      <div class="contact-form">
-        <h2>Send Me a Message</h2>
-        <form id="contactForm">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="name" required />
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
 
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="email" required />
+    <!-- Google Map -->
+    <div class="mapsection">
+      <h3>My Location</h3>
+      <iframe 
+        src="https://www.google.com/maps?q=No.8%20Karewa%20Maskare,%20Yola-Jimeta,%20Adamawa%20State&output=embed"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
 
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit" class="btn-primary">Send Message</button>
-          <p id="formStatus" style="margin-top: 1rem; color: green;"></p>
-        </form>
+    <!-- Contact Info -->
+    <div class="contactinfo">
+      <h3>Contact Details</h3>
+      <p>📍 No.8 Karewa Maskare, Karewa Ward, Yola-Jimeta, Adamawa State</p>
+      <p>📞 Phone: 07088886028</p>
+      <p>📱 WhatsApp: +2347088886028</p>
+      <p>✉️ Email: haroon@bluesapphire.com.ng</p>
+      <p>🌐 GitHub: <a href="https://github.com/gpopzraw9/" target="_blank">gpopzraw9</a></p>
+      <div class="sociallinks">
+        <a href="#">LinkedIn</a> | 
+        <a href="#">YouTube</a> |
+        <a href="#">Twitter/X</a>
       </div>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <h2>Let's Connect!</h2>
-    <p>Whether it's a project, question, or just to say hello — I'd love to hear from you.</p>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="sitefooter">
     <p>GpopzRaw © 2025. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">GitHub</a> |  
-      <a href="#">YouTube</a> | 
-      <a href="#">Twitter</a>
-    </div>
-    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
+    <button onclick="toggleTheme()" class="themetogglefooter">☀️</button>
   </footer>
 
   <!-- AI Chatbot Button -->
-  <div class="chatbot-button" onclick="openChatbot()">
+  <div class="chatbotbutton" onclick="openChatbot()">
     💬 Chat with AI
   </div>
 
-  <!-- Placeholder Chatbot Modal -->
-  <div id="chatbotModal" class="chatbot-modal">
-    <div class="chatbot-header">
+  <!-- Chatbot Modal -->
+  <div id="chatbotModal" class="chatbotmodal">
+    <div class="chatbotheader">
       <span>🤖 GpopzBot</span>
       <button onclick="closeChatbot()">✕</button>
     </div>
-    <div class="chatbot-body">
+    <div class="chatbotbody">
       <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
       <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
-  <!-- EmailJS Script -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> 
-  <script type="text/javascript">
-    // Initialize EmailJS with your service ID, template ID, and Public Key
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-
-      // Send email using EmailJS
-      emailjs.send("service_abc123", "template_xyz789", { // Replace with your own service and template IDs
-        from_name: name,
-        from_email: email,
-        message_html: message,
-      })
-      .then(function(response) {
-        document.getElementById('formStatus').textContent = "Message sent successfully!";
-        document.getElementById('contactForm').reset();
-      })
-      .catch(function(error) {
-        document.getElementById('formStatus').textContent = "Failed to send message.";
-        console.log("Error:", error);
-      });
+  <!-- Script -->
+  <script>
+    // Load theme from localStorage
+    document.addEventListener("DOMContentLoaded", function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.remove("lighttheme");
+        document.body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+      } else {
+        document.body.classList.remove("darktheme");
+        document.body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+      }
     });
-  </script>
 
-  <script src="script.js"></script>
+    // Toggle theme and save preference
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("darktheme");
+
+      if (isDark) {
+        body.classList.remove("darktheme");
+        body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("lighttheme");
+        body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Chatbot functions
+    function openChatbot() {
+      document.getElementById("chatbotModal").style.display = "block";
+    }
+
+    function closeChatbot() {
+      document.getElementById("chatbotModal").style.display = "none";
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.querySelector(".chatbotbody input");
+      alert("You asked: " + input.value);
+      input.value = "";
+    }
+
+    // Placeholder form submission handler
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      document.querySelector("form").reset();
+    }
+  </script>
 </body>
 </html>
