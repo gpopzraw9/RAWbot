@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery – GpopzRaw</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Theme Styles */
+    body.lighttheme {
+      background-color: #e0f7ff;
+      color: #000;
+    }
 
+    body.darktheme {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .navlinks a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    .themetoggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .herocontent {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .gallerysection {
+      max-width: 1000px;
+      margin: 0 auto 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .galleryitem {
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .galleryitem:hover {
+      transform: scale(1.02);
+    }
+
+    .galleryitem img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallerycaption {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+
+    .chatbotbutton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .chatbotbutton:hover {
+      background-color: #005fa3;
+    }
+
+    .sitefooter {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ccc;
+    }
+
+    .sociallinks a {
+      color: #007acc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body class="lighttheme">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
+    <nav>
+      <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()" class="themetoggle">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="herocontent">
+    <h1>My Work & Projects</h1>
+    <p>Explore some of my recent work, digital creations, and tech experiments.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallerysection">
+    <div class="galleryitem">
+      <img src="images/gallery1.jpg" alt="Web Development Project" />
+      <div class="gallerycaption">Responsive Web Design</div>
+    </div>
+
+    <div class="galleryitem">
+      <img src="images/gallery2.jpg" alt="AI Automation Demo" />
+      <div class="gallerycaption">AI-Powered Chatbot Interface</div>
+    </div>
+
+    <div class="galleryitem">
+      <img src="images/gallery3.jpg" alt="Tutorial Video Thumbnail" />
+      <div class="gallerycaption">YouTube Tutorial: JavaScript Fundamentals</div>
+    </div>
+
+    <div class="galleryitem">
+      <img src="images/gallery4.jpg" alt="Cybersecurity Infographic" />
+      <div class="gallerycaption">Data Security Best Practices</div>
+    </div>
+
+    <div class="galleryitem">
+      <img src="images/gallery5.jpg" alt="Podcast Recording Setup" />
+      <div class="gallerycaption">Studio Setup for Tech Podcast</div>
+    </div>
+
+    <div class="galleryitem">
+      <img src="images/gallery6.jpg" alt="Code Snippet" />
+      <div class="gallerycaption">Open Source Contribution</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="sitefooter">
+    <p>GpopzRaw © 2025. All rights reserved.</p>
+    <p>📍 Location: No.8 Karewa Maskare, Karewa Ward, Yola-Jimeta, Adamawa State</p>
+    <p>📞 Phone: 07088886028 | WhatsApp: +2347088886028 | Email: haroon@bluesapphire.com.ng</p>
+    <div class="sociallinks">
+      <a href="https://github.com/gpopzraw9/">GitHub</a>  |
+      <a href="#">LinkedIn</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Twitter/X</a>
+    </div>
+    <button onclick="toggleTheme()" class="themetogglefooter">☀️</button>
+  </footer>
+
+  <!-- AI Chatbot Button -->
+  <div class="chatbotbutton" onclick="openChatbot()">
+    💬 Chat with AI
+  </div>
+
+  <!-- Chatbot Modal -->
+  <div id="chatbotModal" class="chatbotmodal">
+    <div class="chatbotheader">
+      <span>🤖 GpopzBot</span>
+      <button onclick="closeChatbot()">✕</button>
+    </div>
+    <div class="chatbotbody">
+      <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
+      <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Load theme from localStorage
+    document.addEventListener("DOMContentLoaded", function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.remove("lighttheme");
+        document.body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+      } else {
+        document.body.classList.remove("darktheme");
+        document.body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+      }
+    });
+
+    // Toggle theme and save preference
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("darktheme");
+
+      if (isDark) {
+        body.classList.remove("darktheme");
+        body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("lighttheme");
+        body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Chatbot functions
+    function openChatbot() {
+      document.getElementById("chatbotModal").style.display = "block";
+    }
+
+    function closeChatbot() {
+      document.getElementById("chatbotModal").style.display = "none";
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.querySelector(".chatbotbody input");
+      alert("You asked: " + input.value);
+      input.value = "";
+    }
+  </script>
+</body>
+</html>
