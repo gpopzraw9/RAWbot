@@ -1,38 +1,136 @@
-<nav>
-  <ul style="list-style: none; display: flex; gap: 15px;">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-<hr />
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>GpopzRaw - About</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header>
-    <h1>About Me</h1>
+<body class="light-theme">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+    <button onclick="toggleTheme()" class="theme-toggle">☀️ Toggle Theme</button>
   </header>
-  <section>
-    <h2>Who I Am</h2>
-    <p>Hello! I'm Haroon, a multi-skilled professional offering services in web development, educational AI, app creation, and content development. I help businesses and individuals bring their ideas to life with modern technology.</p>
+
+  <!-- Hero Section -->
+  <section class="hero about-hero">
+    <div class="hero-content center-text">
+      <img src="images/me.jpg" alt="Haroon" class="profile-pic" />
+      <h1>About GpopzRaw</h1>
+      <p>Meet Haroon Ahmad Amin — a self-taught developer, educator, and builder of digital dreams.</p>
+    </div>
   </section>
-  <footer>
-    <p>© 2025 Haroon's Services</p>
+
+  <!-- My Journey -->
+  <section class="bio-section">
+    <h2>My Journey</h2>
+    <div class="bio-content">
+      <p>
+        I started my journey with a simple curiosity about how things work online.
+        From building small websites to diving deep into AI, cybersecurity, and education,
+        I've always believed that learning by doing is the best way forward.
+      </p>
+      <p>
+        Over the years, I’ve built tools, created tutorials, spoken at events, and helped others learn technology through hands-on projects.
+        GpopzRaw is where all my experiences, ideas, and creations come together.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section">
+    <h2>Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-card">💻 Full-Stack Development</div>
+      <div class="skill-card">🤖 AI & Automation</div>
+      <div class="skill-card">🎓 Educational Content Creation</div>
+      <div class="skill-card">🔐 Cybersecurity Basics</div>
+      <div class="skill-card">🎙️ Podcasting & Media</div>
+      <div class="skill-card">🎨 UI/UX Design</div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <h2>Milestones</h2>
+    <ul class="timeline">
+      <li>
+        <strong>2017</strong> – Started coding with HTML/CSS/JS
+      </li>
+      <li>
+        <strong>2019</strong> – Built first full-stack web app
+      </li>
+      <li>
+        <strong>2021</strong> – Launched YouTube tutorial channel
+      </li>
+      <li>
+        <strong>2022</strong> – Explored AI and automation tools
+      </li>
+      <li>
+        <strong>2023</strong> – Created educational platforms and podcast
+      </li>
+      <li>
+        <strong>2024</strong> – Founded GpopzRaw as a creative hub
+      </li>
+    </ul>
+  </section>
+
+  <!-- Values & Vision -->
+  <section class="vision-section">
+    <h2>Values & Vision</h2>
+    <p>
+      At GpopzRaw, I believe in creating value through innovation, sharing knowledge openly, and making technology accessible to everyone.
+      Whether it's building tools, writing tutorials, or speaking to communities, I aim to empower people to build their own digital futures.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Want to Collaborate?</h2>
+    <p>Let's create something meaningful together!</p>
+    <a href="contact.html" class="btn-primary">Contact Me</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>GpopzRaw © 2025. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">GitHub</a> | 
+      <a href="#">YouTube</a> | 
+      <a href="#">Twitter</a>
+    </div>
+    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
   </footer>
+
+  <!-- AI Chatbot Button -->
+  <div class="chatbot-button" onclick="openChatbot()">
+    💬 Chat with AI
+  </div>
+
+  <!-- Placeholder Chatbot Modal -->
+  <div id="chatbotModal" class="chatbot-modal">
+    <div class="chatbot-header">
+      <span>🤖 GpopzBot</span>
+      <button onclick="closeChatbot()">✕</button>
+    </div>
+    <div class="chatbot-body">
+      <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
+      <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
