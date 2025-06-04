@@ -1,44 +1,137 @@
-<nav>
-  <ul style="list-style: none; display: flex; gap: 15px;">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-<hr />
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>GpopzRaw - Services</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header>
-    <h1>My Services</h1>
+<body class="light-theme">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+    <button onclick="toggleTheme()" class="theme-toggle">☀️ Toggle Theme</button>
   </header>
-  <section>
-    <h2>What I Offer</h2>
-    <ul>
-      <li>🌐 Web Development & Design</li>
-      <li>📱 App Development (Educational, Utility)</li>
-      <li>🎓 AI-based Educational Solutions</li>
-      <li>🧠 Critical Thinking & IQ Test Tools</li>
-      <li>📢 Podcast & Media Production</li>
-    </ul>
+
+  <!-- Hero Section -->
+  <section class="hero about-hero">
+    <div class="hero-content center-text">
+      <h1>My Services</h1>
+      <p>I offer a range of tech-driven services — from development to education, automation to security.</p>
+    </div>
   </section>
-  <footer>
-    <p>© 2025 Haroon's Services</p>
+
+  <!-- Services Grid -->
+  <section class="services-grid">
+    <div class="service-card">
+      <h3>💻 Full-Stack Web Development</h3>
+      <p>
+        Modern, scalable websites and applications using the latest front-end and back-end technologies.
+        Built for performance, usability, and growth.
+      </p>
+    </div>
+    <div class="service-card">
+      <h3>🤖 AI & Automation Tools</h3>
+      <p>
+        Intelligent bots, automation scripts, and AI-powered solutions to streamline workflows,
+        analyze data, and boost productivity.
+      </p>
+    </div>
+    <div class="service-card">
+      <h3>🎓 Educational Content Creation</h3>
+      <p>
+        Tutorials, courses, and learning platforms designed to help others learn coding,
+        cybersecurity, AI, and digital innovation.
+      </p>
+    </div>
+    <div class="service-card">
+      <h3>🔐 Cybersecurity Guidance</h3>
+      <p>
+        Practical advice on securing systems, protecting data, and understanding threats.
+        From basics to advanced practices.
+      </p>
+    </div>
+    <div class="service-card">
+      <h3>🎙️ Podcasting & Digital Media</h3>
+      <p>
+        Engaging audio content creation, editing, and publishing to share knowledge,
+        stories, and insights with the world.
+      </p>
+    </div>
+    <div class="service-card">
+      <h3>🔧 Custom Tools & Scripts</h3>
+      <p>
+        Tailored software, utilities, and scripts to solve specific problems,
+        automate tasks, and enhance user experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Tools -->
+  <section class="tools-section">
+    <h2>Tools & Technologies I Use</h2>
+    <div class="tools-list">
+      <span>JavaScript</span>
+      <span>React</span>
+      <span>Node.js</span>
+      <span>Python</span>
+      <span>OpenAI API</span>
+      <span>Figma</span>
+      <span>Git</span>
+      <span>Linux</span>
+      <span>WordPress</span>
+      <span>AWS</span>
+      <span>Docker</span>
+      <span>SQL/NoSQL</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to Start a Project?</h2>
+    <p>Let’s discuss how I can help bring your idea to life.</p>
+    <a href="contact.html" class="btn-primary">Get in Touch</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>GpopzRaw © 2025. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">GitHub</a> | 
+      <a href="#">YouTube</a> | 
+      <a href="#">Twitter</a>
+    </div>
+    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
   </footer>
+
+  <!-- AI Chatbot Button -->
+  <div class="chatbot-button" onclick="openChatbot()">
+    💬 Chat with AI
+  </div>
+
+  <!-- Placeholder Chatbot Modal -->
+  <div id="chatbotModal" class="chatbot-modal">
+    <div class="chatbot-header">
+      <span>🤖 GpopzBot</span>
+      <button onclick="closeChatbot()">✕</button>
+    </div>
+    <div class="chatbot-body">
+      <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
+      <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
