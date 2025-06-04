@@ -43,3 +43,33 @@ function getBotResponse(input) {
     return "Hmm... I'm still learning. Try asking about services, Haroon, or contact info!";
   }
 }
+
+// Function to toggle theme
+function toggleTheme() {
+  const body = document.body;
+  body.classList.toggle('dark-theme');
+
+  // Save theme preference to localStorage
+  if (body.classList.contains('dark-theme')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+}
+
+// Function to apply saved theme on page load
+function applySavedTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  const body = document.body;
+
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+  } else {
+    body.classList.remove('dark-theme');
+  }
+}
+
+// Apply saved theme when the page loads
+window.onload = function () {
+  applySavedTheme();
+};
