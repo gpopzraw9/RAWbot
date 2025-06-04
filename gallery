@@ -123,12 +123,12 @@
     <li><a href="about.html">About</a></li>
     <li class="dropdown">
   <span>Services ▾</span>
-  <ul class="dropdown-content">
-  <li><a href="web-development.html">💻 Web Development</a></li>
-  <li><a href="ai-automation.html">🤖 AI & Automation</a></li>
-  <li><a href="education-tutorials.html">🎓 Education & Tutorials</a></li>
-  <li><a href="cybersecurity.html">🔐 Cybersecurity</a></li>
-  <li><a href="podcasting-media.html">🎙️ Podcasting & Media</a></li>
+ <ul class="dropdown-content">
+  <li><a href="/RAWbot/web-development.html">💻 Web Development</a></li>
+  <li><a href="/RAWbot/ai-automation.html">🤖 AI & Automation</a></li>
+  <li><a href="/RAWbot/education-tutorials.html">🎓 Education & Tutorials</a></li>
+  <li><a href="/RAWbot/cybersecurity.html">🔐 Cybersecurity</a></li>
+  <li><a href="/RAWbot/podcasting-media.html">🎙️ Podcasting & Media</a></li>
 </ul>
 </li>
     <li><a href="portfolio.html">Portfolio</a></li>
