@@ -1,59 +1,151 @@
-<nav>
-  <ul style="list-style: none; display: flex; gap: 15px;">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-<hr />
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio - My Services Hub</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>GpopzRaw - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header>
-    <h1>My Project Portfolio</h1>
+<body class="light-theme">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <a href="faq.html">FAQ</a>
-      <a href="blog.html">Blog</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+    <button onclick="toggleTheme()" class="theme-toggle">☀️ Toggle Theme</button>
   </header>
 
-  <main>
-    <section id="ai-tutor">
-      <h2>AI Tutor App</h2>
-      <img src="images/ai_tutor.png" alt="AI Tutor App Screenshot" width="300">
-      <p>This interactive tutor uses artificial intelligence to teach kids and adults through voice, visuals, and engaging animations. It works offline and is designed for low-resource settings like rural areas.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero about-hero">
+    <div class="hero-content center-text">
+      <h1>My Work</h1>
+      <p>A collection of my best projects — from web apps to AI tools and educational platforms.</p>
+    </div>
+  </section>
 
-    <section id="podcast">
-      <h2>Digital Shadows Podcast</h2>
-      <img src="images/podcast_cover.png" alt="Podcast Logo" width="300">
-      <p>A podcast uncovering global cybercrimes, corruption, and tech abuse across borders — focused on awareness, truth, and awakening African youth.</p>
-    </section>
+  <!-- Filter Buttons -->
+  <section class="filter-section">
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+      <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+      <button class="filter-btn" onclick="filterProjects('ai')">AI</button>
+      <button class="filter-btn" onclick="filterProjects('education')">Education</button>
+      <button class="filter-btn" onclick="filterProjects('media')">Media</button>
+    </div>
+  </section>
 
-    <section id="metal-detector">
-      <h2>Smart Metal Detector</h2>
-      <img src="images/metal_detector.png" alt="Metal Detector Prototype" width="300">
-      <p>A custom-built Arduino-based metal detector enhanced with GPS, ground radar, and AI to help detect minerals, gemstones, and metals with better accuracy.</p>
-    </section>
-  </main>
+  <!-- Projects Grid -->
+  <section class="projects-grid">
+    <div class="project-card" data-category="web">
+      <img src="images/project-web1.jpg" alt="Web Project 1">
+      <h3>Modern Portfolio Site</h3>
+      <p>Fully responsive personal website built with HTML, CSS, and JavaScript.</p>
+      <span class="category-tag">Web</span>
+      <div class="project-links">
+        <a href="#">GitHub</a> | 
+        <a href="#">Live Demo</a>
+      </div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 My Services Hub. All rights reserved.</p>
+    <div class="project-card" data-category="ai">
+      <img src="images/project-ai1.jpg" alt="AI Project 1">
+      <h3>AI Chatbot Assistant</h3>
+      <p>Intelligent chatbot using OpenAI API to answer user questions and help with tasks.</p>
+      <span class="category-tag">AI</span>
+      <div class="project-links">
+        <a href="#">GitHub</a> | 
+        <a href="#">Demo</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="education">
+      <img src="images/project-edu1.jpg" alt="Education Project 1">
+      <h3>Learning Dashboard</h3>
+      <p>Interactive dashboard for tracking learning progress and course completion.</p>
+      <span class="category-tag">Education</span>
+      <div class="project-links">
+        <a href="#">GitHub</a> | 
+        <a href="#">Live</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="media">
+      <img src="images/project-media1.jpg" alt="Media Project 1">
+      <h3>Digital Podcast Studio</h3>
+      <p>Setup and automation tools for recording, editing, and publishing podcasts.</p>
+      <span class="category-tag">Media</span>
+      <div class="project-links">
+        <a href="#">Details</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="web">
+      <img src="images/project-web2.jpg" alt="Web Project 2">
+      <h3>Blog Platform</h3>
+      <p>Full-stack blog engine with admin panel and markdown support.</p>
+      <span class="category-tag">Web</span>
+      <div class="project-links">
+        <a href="#">GitHub</a> | 
+        <a href="#">Live</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-category="ai">
+      <img src="images/project-ai2.jpg" alt="AI Project 2">
+      <h3>Image Generator Tool</h3>
+      <p>Uses AI to generate creative images based on text prompts.</p>
+      <span class="category-tag">AI</span>
+      <div class="project-links">
+        <a href="#">GitHub</a> | 
+        <a href="#">Try It</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Want to See More?</h2>
+    <p>Explore all my open-source projects on GitHub or reach out to discuss custom work.</p>
+    <a href="https://github.com/gpopzraw9"  target="_blank" class="btn-primary">View on GitHub</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>GpopzRaw © 2025. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">GitHub</a> | 
+      <a href="#">YouTube</a> | 
+      <a href="#">Twitter</a>
+    </div>
+    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
   </footer>
+
+  <!-- AI Chatbot Button -->
+  <div class="chatbot-button" onclick="openChatbot()">
+    💬 Chat with AI
+  </div>
+
+  <!-- Placeholder Chatbot Modal -->
+  <div id="chatbotModal" class="chatbot-modal">
+    <div class="chatbot-header">
+      <span>🤖 GpopzBot</span>
+      <button onclick="closeChatbot()">✕</button>
+    </div>
+    <div class="chatbot-body">
+      <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
+      <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
