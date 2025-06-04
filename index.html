@@ -1,49 +1,38 @@
-<nav>
-  <ul style="list-style: none; display: flex; gap: 15px;">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-<hr />
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Services</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GpopzRaw - Home</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-  <footer>
-  GpopzRaw © 2025. All rights reserved.
-  <button onclick="toggleTheme()" class="theme-toggle">Toggle Theme</button>
-</footer>
-<script src="script.js"></script>
-
 <body>
-    <header>
-        <h1>Welcome to My Services</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="services.html">Services</a> |
-            <a href="about.html">About</a> |
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <header class="navbar">
+    <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button onclick="toggleTheme()" class="theme-toggle">Toggle Theme</button>
+  </header>
 
-    <main>
-        <section>
-            <h2>Explore My Skills</h2>
-            <p>I offer various digital services including web development, content creation, online tutoring, and more.</p>
-        </section>
-    </main>
+  <main class="hero">
+    <section class="intro">
+      <img src="images/me.jpg" alt="Haroon" class="profile-pic" />
+      <h1>Welcome to GpopzRaw</h1>
+      <p>Your trusted source for cutting-edge tech, development, and digital innovation.</p>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 My Services. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>GpopzRaw © 2025. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
