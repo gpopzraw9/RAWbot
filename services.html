@@ -3,16 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GpopzRaw - Services</title>
+  <title>Services – GpopzRaw</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body.lighttheme {
+      background-color: #e0f7ff;
+      color: #000;
+    }
+
+    body.darktheme {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .navlinks a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    .themetoggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .herocontent {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .servicessection h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #007acc;
+    }
+
+    .servicecard {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .servicecard:hover {
+      transform: scale(1.02);
+    }
+
+    .servicecard h3 {
+      margin-top: 0;
+    }
+
+    .chatbotbutton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .chatbotbutton:hover {
+      background-color: #005fa3;
+    }
+
+    .sitefooter {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ccc;
+    }
+
+    .sociallinks a {
+      color: #007acc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
-<body class="light-theme">
+<body class="lighttheme">
 
   <!-- Navigation -->
   <header class="navbar">
     <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <ul class="nav-links">
+      <ul class="navlinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
@@ -20,118 +118,156 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button onclick="toggleTheme()" class="theme-toggle">☀️ Toggle Theme</button>
+    <button onclick="toggleTheme()" class="themetoggle">🌙</button>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero about-hero">
-    <div class="hero-content center-text">
-      <h1>My Services</h1>
-      <p>I offer a range of tech-driven services — from development to education, automation to security.</p>
-    </div>
+  <section class="herocontent">
+    <h1>Our Services</h1>
+    <p>We offer high-quality tech solutions that empower individuals and businesses to grow and innovate.</p>
   </section>
 
-  <!-- Services Grid -->
-  <section class="services-grid">
-    <div class="service-card">
-      <h3>💻 Full-Stack Web Development</h3>
+  <!-- Services Section -->
+  <section class="servicessection">
+    <h2>Detailed Offerings</h2>
+
+    <div class="servicecard">
+      <h3>💻 FullStack Web Development</h3>
       <p>
-        Modern, scalable websites and applications using the latest front-end and back-end technologies.
-        Built for performance, usability, and growth.
+        Build fast, scalable, and responsive websites or applications using the latest web technologies like React, Node.js, Express, MongoDB, and more.
+        Perfect for startups, entrepreneurs, or businesses looking to establish an online presence.
       </p>
+      <a href="webdevelopment.html">Learn more →</a>
     </div>
-    <div class="service-card">
+
+    <div class="servicecard">
       <h3>🤖 AI & Automation Tools</h3>
       <p>
-        Intelligent bots, automation scripts, and AI-powered solutions to streamline workflows,
-        analyze data, and boost productivity.
+        Automate repetitive tasks, create smart bots, integrate AI into your workflows, and build intelligent systems that adapt and learn.
+        Ideal for data-driven organizations and tech-forward teams.
       </p>
+      <a href="aiautomation.html">Learn more →</a>
     </div>
-    <div class="service-card">
-      <h3>🎓 Educational Content Creation</h3>
+
+    <div class="servicecard">
+      <h3>🎓 Educational Platform & Tutorials</h3>
       <p>
-        Tutorials, courses, and learning platforms designed to help others learn coding,
-        cybersecurity, AI, and digital innovation.
+        Create engaging educational platforms, tutorials, and learning resources tailored to your audience — whether students, developers, or professionals.
+        Empower knowledge sharing through structured courses and digital tools.
       </p>
+      <a href="educationtutorials.html">Learn more →</a>
     </div>
-    <div class="service-card">
+
+    <div class="servicecard">
       <h3>🔐 Cybersecurity Guidance</h3>
       <p>
-        Practical advice on securing systems, protecting data, and understanding threats.
-        From basics to advanced practices.
+        Learn how to secure your systems, protect sensitive data, and implement best practices for staying safe in the digital world.
+        From basic tips to advanced strategies, we help you stay ahead of threats.
       </p>
+      <a href="cybersecurity.html">Learn more →</a>
     </div>
-    <div class="service-card">
+
+    <div class="servicecard">
       <h3>🎙️ Podcasting & Digital Media</h3>
       <p>
-        Engaging audio content creation, editing, and publishing to share knowledge,
-        stories, and insights with the world.
+        Produce and publish high-quality podcasts, audio content, and media assets that reach and engage audiences globally.
+        From recording to publishing, we guide you through every step of the process.
       </p>
+      <a href="podcastingmedia.html">Learn more →</a>
     </div>
-    <div class="service-card">
-      <h3>🔧 Custom Tools & Scripts</h3>
-      <p>
-        Tailored software, utilities, and scripts to solve specific problems,
-        automate tasks, and enhance user experience.
-      </p>
-    </div>
-  </section>
 
-  <!-- Featured Tools -->
-  <section class="tools-section">
-    <h2>Tools & Technologies I Use</h2>
-    <div class="tools-list">
-      <span>JavaScript</span>
-      <span>React</span>
-      <span>Node.js</span>
-      <span>Python</span>
-      <span>OpenAI API</span>
-      <span>Figma</span>
-      <span>Git</span>
-      <span>Linux</span>
-      <span>WordPress</span>
-      <span>AWS</span>
-      <span>Docker</span>
-      <span>SQL/NoSQL</span>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <h2>Ready to Start a Project?</h2>
-    <p>Let’s discuss how I can help bring your idea to life.</p>
-    <a href="contact.html" class="btn-primary">Get in Touch</a>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="sitefooter">
     <p>GpopzRaw © 2025. All rights reserved.</p>
-    <div class="social-links">
-      <a href="#">GitHub</a> | 
-      <a href="#">YouTube</a> | 
-      <a href="#">Twitter</a>
+    <p>📍 Location: No.8 Karewa Maskare, Karewa Ward, Yola-Jimeta, Adamawa State</p>
+    <p>📞 Phone: 07088886028 | WhatsApp: +234708886028 | Email: haroon@bluesapphire.com.ng</p>
+    <div class="sociallinks">
+      <a href="https://github.com/gpopzraw9/">GitHub</a>  |
+      <a href="#">LinkedIn</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Twitter/X</a>
     </div>
-    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
+    <button onclick="toggleTheme()" class="themetogglefooter">☀️</button>
   </footer>
 
   <!-- AI Chatbot Button -->
-  <div class="chatbot-button" onclick="openChatbot()">
+  <div class="chatbotbutton" onclick="openChatbot()">
     💬 Chat with AI
   </div>
 
-  <!-- Placeholder Chatbot Modal -->
-  <div id="chatbotModal" class="chatbot-modal">
-    <div class="chatbot-header">
+  <!-- Chatbot Modal -->
+  <div id="chatbotModal" class="chatbotmodal">
+    <div class="chatbotheader">
       <span>🤖 GpopzBot</span>
       <button onclick="closeChatbot()">✕</button>
     </div>
-    <div class="chatbot-body">
+    <div class="chatbotbody">
       <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
       <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    // Load theme from localStorage
+    document.addEventListener("DOMContentLoaded", function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.remove("lighttheme");
+        document.body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+      } else {
+        document.body.classList.remove("darktheme");
+        document.body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+      }
+    });
+
+    // Toggle theme and save preference
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("darktheme");
+
+      if (isDark) {
+        body.classList.remove("darktheme");
+        body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("lighttheme");
+        body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Chatbot functions
+    function openChatbot() {
+      document.getElementById("chatbotModal").style.display = "block";
+    }
+
+    function closeChatbot() {
+      document.getElementById("chatbotModal").style.display = "none";
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.querySelector(".chatbotbody input");
+      alert("You asked: " + input.value);
+      input.value = "";
+    }
+  </script>
 </body>
 </html>
