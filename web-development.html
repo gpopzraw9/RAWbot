@@ -3,16 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web Development - GpopzRaw</title>
+  <title>Web Development – GpopzRaw</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Theme Styles */
+    body.lighttheme {
+      background-color: #e0f7ff;
+      color: #000;
+    }
+
+    body.darktheme {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    .navlinks a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
+    }
+
+    .themetoggle {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .herocontent {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .servicepage h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #007acc;
+    }
+
+    .servicepage p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .featureslist {
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .featureitem {
+      margin-bottom: 20px;
+    }
+
+    .featureitem h4 {
+      color: #007acc;
+    }
+
+    .chatbotbutton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+
+    .chatbotbutton:hover {
+      background-color: #005fa3;
+    }
+
+    .sitefooter {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      background-color: #1a1a1a;
+      color: #ccc;
+    }
+
+    .sociallinks a {
+      color: #007acc;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
-<body class="light-theme">
+<body class="lighttheme">
 
   <!-- Navigation -->
   <header class="navbar">
     <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-      <ul class="nav-links">
+      <ul class="navlinks">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -20,106 +122,149 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button onclick="toggleTheme()" class="theme-toggle">🌙 Toggle Theme</button>
+    <button onclick="toggleTheme()" class="themetoggle">🌙</button>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero about-hero">
-    <div class="hero-content center-text">
-      <h1>💻 Full-Stack Web Development</h1>
-      <p>Modern, scalable, and responsive websites and applications built with the latest tools and frameworks.</p>
-    </div>
+  <section class="herocontent">
+    <h1>FullStack Web Development</h1>
+    <p>I build fast, scalable, and responsive websites and applications that deliver real value for startups, businesses, and individuals.</p>
   </section>
 
-  <!-- Page Content -->
-  <section class="page-content" style="padding: 2rem;">
-    <div class="content-wrapper">
+  <!-- Service Page Content -->
+  <section class="servicepage">
+    <div class="container">
+      <h2>What I Offer</h2>
       <p>
-        At GpopzRaw, we specialize in building powerful, fast, and secure websites that scale with your business.
-        From frontend design to backend development, we deliver full-stack solutions tailored to your needs.
+        Whether you need a personal portfolio, business site, or full web application, I help bring your ideas to life with modern tools and frameworks.
+        From concept to deployment, I ensure your project is built with performance, security, and user experience in mind.
       </p>
 
-      <h3>Our Tech Stack</h3>
-      <p>We work with modern technologies like:</p>
-      <ul class="tech-list">
-        <li>HTML5 / CSS3 / JavaScript (ES6+)</li>
-        <li>React.js, Vue.js, Angular</li>
-        <li>Node.js, Express.js, Django</li>
-        <li>MongoDB, PostgreSQL, Firebase</li>
-        <li>REST & GraphQL APIs</li>
-      </ul>
+      <div class="featureslist">
+        <div class="featureitem">
+          <h4>📱 Responsive Design</h4>
+          <p>Your website will look great on all devices — desktop, tablet, and mobile — ensuring a seamless experience for every visitor.</p>
+        </div>
 
-      <h3>Featured Project</h3>
-      <p>Check out an example of our recent web development project below:</p>
+        <div class="featureitem">
+          <h4>⚡ Performance Optimization</h4>
+          <p>I optimize loading times, reduce resource usage, and implement best practices so your site runs lightning-fast.</p>
+        </div>
 
-      <!-- Image Placeholder -->
-      <div class="project-image">
-        <img src="images/web-project.jpg" alt="Web Development Project" />
+        <div class="featureitem">
+          <h4>🛠️ FullStack Expertise</h4>
+          <p>I work with both frontend (HTML/CSS/JS/React) and backend (Node.js/Express/MongoDB) technologies to create complete solutions.</p>
+        </div>
+
+        <div class="featureitem">
+          <h4>🔐 Security First</h4>
+          <p>Security is a priority. I implement secure authentication, protect against common vulnerabilities, and keep your data safe.</p>
+        </div>
+
+        <div class="featureitem">
+          <h4>📈 SEO-Friendly</h4>
+          <p>I follow search engine optimization principles to help your site rank higher and reach more people.</p>
+        </div>
       </div>
 
-      <h3>How We Build</h3>
+      <h2>Why Choose Me?</h2>
       <p>
-        Our process ensures clean code, high performance, and seamless user experience:
+        I’m not just a developer — I'm a builder of digital experiences. With years of experience crafting websites and apps,
+        I understand what works and how to make your vision a reality. You’ll get clear communication, timely delivery, and support even after launch.
       </p>
-      <ol class="process-steps">
-        <li>Understanding client requirements</li>
-        <li>Designing wireframes and UI/UX mockups</li>
-        <li>Frontend development with responsive layouts</li>
-        <li>Backend setup and database integration</li>
-        <li>Testing, deployment, and maintenance</li>
-      </ol>
-
-      <h3>Video Demo</h3>
-      <p>Watch a short demo of one of our projects in action:</p>
-
-      <!-- Video Embed -->
-      <div class="video-container">
-        <iframe width="100%" height="315"
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-
-      <h3>Gallery</h3>
-      <p>Explore more screenshots from our web development projects:</p>
-
-      <!-- Gallery Section -->
-      <div class="gallery">
-        <img src="images/gallery/web1.jpg" alt="Project 1">
-        <img src="images/gallery/web2.jpg" alt="Project 2">
-        <img src="images/gallery/web3.jpg" alt="Project 3">
-        <img src="images/gallery/web4.jpg" alt="Project 4">
-      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="sitefooter">
     <p>GpopzRaw © 2025. All rights reserved.</p>
-    <button onclick="toggleTheme()" class="theme-toggle-footer">☀️</button>
+    <p>📍 Location: No.8 Karewa Maskare, Karewa Ward, Yola-Jimeta, Adamawa State</p>
+    <p>📞 Phone: 07088886028 | WhatsApp: +2347088886028 | Email: haroon@bluesapphire.com.ng</p>
+    <div class="sociallinks">
+      <a href="https://github.com/gpopzraw9/">GitHub</a>  |
+      <a href="#">LinkedIn</a> |
+      <a href="#">YouTube</a> |
+      <a href="#">Twitter/X</a>
+    </div>
+    <button onclick="toggleTheme()" class="themetogglefooter">☀️</button>
   </footer>
 
   <!-- AI Chatbot Button -->
-  <div class="chatbot-button" onclick="openChatbot()">
+  <div class="chatbotbutton" onclick="openChatbot()">
     💬 Chat with AI
   </div>
 
-  <!-- Placeholder Chatbot Modal -->
-  <div id="chatbotModal" class="chatbot-modal">
-    <div class="chatbot-header">
+  <!-- Chatbot Modal -->
+  <div id="chatbotModal" class="chatbotmodal">
+    <div class="chatbotheader">
       <span>🤖 GpopzBot</span>
       <button onclick="closeChatbot()">✕</button>
     </div>
-    <div class="chatbot-body">
+    <div class="chatbotbody">
       <p>Hello! I'm your GpopzBot assistant. Ask me anything about Haroon, his services, or technology!</p>
       <input type="text" placeholder="Type your question..." onkeypress="handleKeyPress(event)" />
       <button onclick="sendMessage()">Send</button>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    // Load theme from localStorage
+    document.addEventListener("DOMContentLoaded", function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.remove("lighttheme");
+        document.body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+      } else {
+        document.body.classList.remove("darktheme");
+        document.body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+      }
+    });
+
+    // Toggle theme and save preference
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains("darktheme");
+
+      if (isDark) {
+        body.classList.remove("darktheme");
+        body.classList.add("lighttheme");
+        document.querySelector(".themetoggle").textContent = "🌙";
+        document.querySelector(".themetogglefooter").textContent = "🌙";
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("lighttheme");
+        body.classList.add("darktheme");
+        document.querySelector(".themetoggle").textContent = "☀️";
+        document.querySelector(".themetogglefooter").textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+      }
+    }
+
+    // Chatbot functions
+    function openChatbot() {
+      document.getElementById("chatbotModal").style.display = "block";
+    }
+
+    function closeChatbot() {
+      document.getElementById("chatbotModal").style.display = "none";
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        sendMessage();
+      }
+    }
+
+    function sendMessage() {
+      const input = document.querySelector(".chatbotbody input");
+      alert("You asked: " + input.value);
+      input.value = "";
+    }
+  </script>
 </body>
 </html>
