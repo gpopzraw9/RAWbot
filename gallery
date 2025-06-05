@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery – GpopzRaw</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
@@ -22,7 +22,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .logo {
@@ -57,7 +57,7 @@
     }
 
     .galleryitem {
-      background-color: rgba(255,255,255,0.05);
+      background-color: rgba(255, 255, 255, 0.05);
       border-radius: 10px;
       overflow: hidden;
       transition: transform 0.3s ease;
@@ -118,24 +118,24 @@
   <header class="navbar">
     <img src="images/logo.png" alt="GpopzRaw Logo" class="logo" />
     <nav>
-  <ul class="navlinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li class="dropdown">
-  <span>Services ▾</span>
- <ul class="dropdown-content">
-  <li><a href="/RAWbot/web-development.html">💻 Web Development</a></li>
-  <li><a href="/RAWbot/ai-automation.html">🤖 AI & Automation</a></li>
-  <li><a href="/RAWbot/education-tutorials.html">🎓 Education & Tutorials</a></li>
-  <li><a href="/RAWbot/cybersecurity.html">🔐 Cybersecurity</a></li>
-  <li><a href="/RAWbot/podcasting-media.html">🎙️ Podcasting & Media</a></li>
-</ul>
-</li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <span>Services ▾</span>
+          <ul class="dropdown-content">
+            <li><a href="/RAWbot/web-development.html">💻 Web Development</a></li>
+            <li><a href="/RAWbot/ai-automation.html">🤖 AI & Automation</a></li>
+            <li><a href="/RAWbot/education-tutorials.html">🎓 Education & Tutorials</a></li>
+            <li><a href="/RAWbot/cybersecurity.html">🔐 Cybersecurity</a></li>
+            <li><a href="/RAWbot/podcasting-media.html">🎙️ Podcasting & Media</a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <button onclick="toggleTheme()" class="themetoggle">🌙</button>
   </header>
 
@@ -148,33 +148,33 @@
   <!-- Gallery Section -->
   <section class="gallerysection">
     <div class="galleryitem">
-      <img src="images/gallery1.jpg" alt="Web Development Project" />
-      <div class="gallerycaption">Responsive Web Design</div>
-    </div>
-
-    <div class="galleryitem">
-      <img src="images/gallery2.jpg" alt="AI Automation Demo" />
+      <img src="images/ai_automation_01.jpg" alt="AI Automation Project 1" />
       <div class="gallerycaption">AI-Powered Chatbot Interface</div>
     </div>
 
     <div class="galleryitem">
-      <img src="images/gallery3.jpg" alt="Tutorial Video Thumbnail" />
-      <div class="gallerycaption">YouTube Tutorial: JavaScript Fundamentals</div>
-    </div>
-
-    <div class="galleryitem">
-      <img src="images/gallery4.jpg" alt="Cybersecurity Infographic" />
+      <img src="images/cybersecurity_01.jpg" alt="Cybersecurity Project 1" />
       <div class="gallerycaption">Data Security Best Practices</div>
     </div>
 
     <div class="galleryitem">
-      <img src="images/gallery5.jpg" alt="Podcast Recording Setup" />
-      <div class="gallerycaption">Studio Setup for Tech Podcast</div>
+      <img src="images/education_tutorials_01.jpg" alt="Education Tutorial 1" />
+      <div class="gallerycaption">JavaScript Fundamentals</div>
     </div>
 
     <div class="galleryitem">
-      <img src="images/gallery6.jpg" alt="Code Snippet" />
-      <div class="gallerycaption">Open Source Contribution</div>
+      <img src="images/general_project_01.jpg" alt="General Project 1" />
+      <div class="gallerycaption">Interactive Learning Platform</div>
+    </div>
+
+    <div class="galleryitem">
+      <img src="images/haroon-portrait.jpg" alt="Profile Picture" />
+      <div class="gallerycaption">Haroon Ahmad Amin</div>
+    </div>
+
+    <div class="galleryitem">
+      <img src="images/logo.png" alt="Logo" />
+      <div class="gallerycaption">GpopzRaw Logo</div>
     </div>
   </section>
 
@@ -200,7 +200,7 @@
   <!-- Chatbot Modal -->
   <div id="chatbotModal" class="chatbotmodal">
     <div class="chatbotheader">
-      <span>🤖 GpopzBot</span>
+      <span>GpopzBot</span>
       <button onclick="closeChatbot()">✕</button>
     </div>
     <div class="chatbotbody">
